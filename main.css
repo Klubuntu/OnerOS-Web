@@ -3,7 +3,7 @@ body,
 html {
     color: white;
     font-size: 0.9em !important;
-    font-family: "Consolas, "Inconsolata" !important;
+    font-family: "Consolas", "Inconsolata" !important;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
