@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build": "parcel build src/index.html",
+    "builds": "cross-env NODE_ENV=production parcel build index.html --no-minify",
 "heroku-postbuild": "parcel build src/index.html",
     "test": "parcel index.html --open",
     "start": "parcel index.html",
