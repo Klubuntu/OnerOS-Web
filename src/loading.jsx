@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import "./loading.css";
 //import "./loading.js";
-import CreateDiv from "./OS.js"
+import CreateDiv from "./os.js"
 function removeElementsByClass(className) {
     const elements = document.getElementsByClassName(className);
     while (elements.length > 0) {
