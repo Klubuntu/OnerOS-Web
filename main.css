@@ -1,0 +1,229 @@
+body,
+html {
+    color: white;
+    font-size: 0.9em !important;
+    font-family: "Consolas" !important;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    /*border: red solid;*/
+    overflow: hidden;
+    position: fixed;
+}
+
+.loading-background {
+    background-color: black;
+}
+
+.loaded-background {
+    background-image: url("https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg?crop=entropy&cs=srgb&dl=pexels-francesco-ungaro-2325446.jpg&fit=crop&fm=jpg&h=1280&w=1920");
+}
+
+/* Tutorial */
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.349);
+}
+/* Tutorial */
+
+#app button {
+    position: fixed;
+    border: none;
+    background-color: #343a40;
+    color: #d0c4c4;
+    font-size: 1.8vh;
+    width: 100px;
+    height: 50px;
+    border-radius: 9px;
+}
+
+.box-zone {
+    width: 100%;
+    min-height: 10em;
+    max-height: 10em;
+    margin: 2rem 0 0 -1rem;
+    background-color: #e3e3f3;
+    color: white;
+    border-radius: 0.75em;
+    padding: 5%;
+    touch-action: none;
+    user-select: none;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 2em;
+    position: absolute;
+    bottom: 0;
+    visibility: hidden;
+}
+
+.dropped {
+    background-color: lime !important;
+}
+
+#os-info {
+    position: absolute;
+    bottom: 55px;
+    right: 5px;
+    font-size: 1.1em;
+}
+
+.taskbar {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    height: 5vh;
+    width: 100%;
+    background-color: rgb(128, 128, 128, 0.7);
+    z-index: 200;
+}
+
+.taskbar .apps {
+    display: inline;
+}
+
+.taskbar .apps #app-menu {
+    position: static;
+    margin-top: 1vh;
+    margin-left: 1vw;
+    font-size: 3vh;
+}
+
+/*.taskbar #time {
+    position: absolute;
+    right: 15px;
+    font-size: 3.2vh;
+}
+
+.taskbar #date {
+    position: absolute;
+    right: 109px;
+    font-size: 2.2vh;
+    margin-top: 7px;
+}*/
+
+.taskbar .dt #date {
+    right: 00px;
+    font-size: 2.2vh;
+    margin-top: 7px;
+    margin-left: 38.2vw;
+}
+
+.taskbar .dt #time {
+    right: 15px;
+    font-size: 3.2vh;
+    margin-right: 0px;
+    margin-left: 10px;
+}
+
+.taskbar .dt {
+    position: absolute;
+    right: 12px;
+}
+
+.window {
+    border-radius: 10px;
+    width: 200px;
+    min-width: 246px;
+    height: 200px;
+    margin: 5px;
+    background-color: whitesmoke;
+    display: flex;
+    position: absolute !important;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    z-index: 100;
+}
+
+.window-maximized {
+    left: -5px !important;
+    top: -5px !important;
+    width: 100% !important;
+    height: 105% !important;
+    position: fixed !important;
+}
+
+.window-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.top-window {
+    /*position: absolute;*/
+    background-color: coral;
+    width: 100%;
+    height: 35px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.top-window #title {
+    font-family: Calibri;
+    font-size: 2.1vh;
+    position: absolute;
+    left: 13px;
+}
+
+.window-actions {
+    position: absolute;
+    right: 15px;
+    font-size: 2vh;
+}
+
+.window-actions i {
+    margin-left: 10px;
+}
+
+.active {
+    z-index: 150;
+}
+
+/*.window-switcher {
+    position: fixed;
+    bottom: 52px;
+    left: 3px;
+    background-color: rgb(128, 128, 128, 0.7);
+    width: 99.3%;
+    height: 27px;
+    text-align: center;
+    z-index: 200;
+}
+
+.window-switcher span {
+    margin-right: 10px;
+}*/
+
+.window-switcher {
+    position: fixed;
+    /* bottom: 52px; */
+    left: 3px;
+    background-color: rgb(128, 128, 128, 0.7);
+    width: 99.3%;
+    height: 102px;
+    text-align: center;
+    z-index: 200;
+    border-radius: 12px;
+}
+
+.window-switcher span {
+    margin-right: 10px;
+    margin-top: 23px;
+    /* position: fixed; */
+    left: 10px;
+    right: 0;
+    height: 50px;
+    background: #708090bf;
+    width: 15%;
+    display: inline-grid;
+    border-radius: 8px;
+}
