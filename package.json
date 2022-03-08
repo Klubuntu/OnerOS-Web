@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "parcel build src/index.html",
+    "build": "parcel build index.html",
     "builds": "cross-env NODE_ENV=production parcel build index.html --no-minify",
-"heroku-postbuild": "parcel build src/index.html",
+"heroku-postbuild": "parcel build index.html",
     "test": "parcel index.html --open",
     "start": "parcel index.html",
-    "start-host": "node_modules/parcel-bundler/bin/cli.js src/index.html"
+    "start-host": "node_modules/parcel-bundler/bin/cli.js index.html"
   },
   "keywords": [],
   "author": "",
