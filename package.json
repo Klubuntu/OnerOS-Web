@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "build": "parcel build public/index.html",
+"heroku-postbuild": "parcel build public/index.html",
     "test": "parcel index.html --open",
     "start": "parcel index.html",
     "start-host": "node_modules/parcel-bundler/bin/cli.js src/index.html"
