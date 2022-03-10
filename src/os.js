@@ -52,7 +52,6 @@ function switch_window() {
                 switch_active = 0
             });
         }
-        }
         /*for (let i = 1; i < windowID; i++) {
             $(".window-switcher").append("<span id='ws" + i + "'>Window " + i + "</span>")
             //console.log(i)
