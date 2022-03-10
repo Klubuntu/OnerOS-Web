@@ -35,7 +35,12 @@ function switch_window() {
         //console.log(x2[0])
 
         for (const i of wLIST) {
-            $(".window-switcher").append("<span id='ws" + i + "'>Window " + i + "</span>")
+            var x = $("#window_id" + i + " .window-box .top-window").css("background-color")
+            var backgroundColor = "style=" + "'background-color:" + x + ";'";
+            var titleWindow = $("#window_id" + i + " .window-box .top-window #title").text();
+            console.log("#window_id" + i)
+            console.log(backgroundColor)
+            $(".window-switcher").append("<span id='ws" + i + "' " + backgroundColor + ">" + "<h5 style='margin-top: 4px;'>" + titleWindow + "</h5>" + "<p style='margin-top: -8px;'>" + "Window " + i + "</p></span>")
             $(".window-switcher").show()
             $("#ws" + i).click(function () {
                 console.log(this.id)
@@ -46,6 +51,7 @@ function switch_window() {
                 $(windowIDn2).addClass("active")
                 switch_active = 0
             });
+        }
         }
         /*for (let i = 1; i < windowID; i++) {
             $(".window-switcher").append("<span id='ws" + i + "'>Window " + i + "</span>")
