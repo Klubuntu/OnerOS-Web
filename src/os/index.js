@@ -1,7 +1,7 @@
 import React from 'react';
 //import "core-js/stable";
 import "regenerator-runtime/runtime";
-import KernelLoad from './kernelLoad'
+import KernelLoad from './loader/kernelLoad'
 let x = 1;
 //import regeneratorRuntime from "regenerator-runtime";
 

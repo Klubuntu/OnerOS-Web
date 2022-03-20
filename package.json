@@ -1,14 +1,15 @@
 {
   "name": "oner-web",
+  "appname": "Oner OS Web (App Build)",
+  "app-version": "1.0.0",
+  "productName": "Oner OS Web (App Build)",
   "version": "1.0.0",
-  "main": "index.js",
+  "homepage": "../index.html",
+  "main2": "main.js",
+  "main": "./public/electron.js",
   "scripts": {
-    "build": "parcel build index.html",
-    "builds": "cross-env NODE_ENV=production parcel build index.html --no-minify",
-"heroku-postbuild": "parcel build index.html",
     "test": "parcel index.html --open",
-    "start": "parcel index.html",
-    "start-host": "node_modules/parcel-bundler/bin/cli.js index.html"
+    "start": "parcel index.html"
   },
   "keywords": [],
   "author": "",
@@ -26,7 +27,9 @@
     "lib": "^4.3.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-router-dom": "^6.2.1"
+    "react-router-dom": "^6.2.1",
+    "speedometer": "^1.1.0",
+    "start-menu": "^1.2.0"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.17.0",
@@ -42,6 +45,8 @@
     "babel-preset-es2016": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "electron": "^3.1.13",
+    "electron-packager": "^15.4.0",
     "parcel-bundler": "^1.12.5",
     "preset-react": "^1.0.0"
   },

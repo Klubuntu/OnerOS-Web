@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import "./loading.css";
 //import "./loading.js";
-import CreateDiv from "./os.js"
+import CreateDiv from "../os.js"
 function removeElementsByClass(className) {
     const elements = document.getElementsByClassName(className);
     while (elements.length > 0) {
@@ -25,7 +25,7 @@ export class OSAnimation extends React.Component {
         setTimeout(() => { OSLoad() }, 3000)
         return (
             <div className="osa wrapper">
-                <div className="box">
+                <div className="box_loading">
                 </div>
             </div>
 
