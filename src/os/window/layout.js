@@ -86,11 +86,11 @@ export function draggable() {
         // translate the element
         ty = (parseFloat(target.getAttribute('data-y'))) - 5;
         tx = (parseFloat(target.getAttribute('data-y'))) - 5;
-        target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
+        target.style.transform = 'translate(' + tx + 'px, ' + ty + 'px)'
 
         // update the posiion attributes
-        target.setAttribute('data-x', x)
-        target.setAttribute('data-y', y)
+        target.setAttribute('data-x', tx)
+        target.setAttribute('data-y', ty)
     }
 
     // this function is used later in the resizing and gesture demos
