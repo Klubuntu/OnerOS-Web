@@ -33,7 +33,7 @@ export function build_taskbar() {
     });
 
     $('#google-app').click(function () {
-        Window.createWindow("https://googlclone-v1.web.app/", "Google", "#1976d2")
+        Window.createWindow("https://www.google.com/webhp/", "Google", "#1976d2")
     });
     $('#bing-app').click(function () {
         Window.createWindow("https://bing.com/", "Bing", "#1976d2")
