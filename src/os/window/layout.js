@@ -68,7 +68,7 @@ export function draggable() {
             inertia: true
         })
         .on("dragmove", function (event) {
-            console.log(event.target)
+            /*console.log(event.target)*/
             //$("#root").text(event.dx + " x " + event.dy)
             x += event.dx;
             y += event.dy;
