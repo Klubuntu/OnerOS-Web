@@ -21,7 +21,7 @@
     "history": "^5.2.0",
     "interactjs": "^1.10.11",
     "jquery": "^3.6.0",
-    "jquery-ui": "^1.13.1",
+    "jquery-ui": "^1.13.2",
     "jquery-ui-bundle": "^1.12.1-migrate",
     "lib": "^4.3.3",
     "react": "^17.0.2",
