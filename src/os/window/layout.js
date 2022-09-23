@@ -95,6 +95,8 @@ export function draggable() {
 }
 
 export function build_window() {
+    resizable();
+    draggable();
     /*$(function () {
         $(".window").resizable({
             maxHeight: "80%",
