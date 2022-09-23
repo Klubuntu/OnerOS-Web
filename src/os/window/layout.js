@@ -76,12 +76,8 @@ export function draggable() {
     function dragMoveListener(event) {
         var target = event.target
         // keep the dragged position in the data-x/data-y attributes
-        /*var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
-        var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy*/
-        var x = (parseFloat(target.getAttribute('data-x'))) + event.dx
-        var y = (parseFloat(target.getAttribute('data-y'))) + event.dy
-        console.log("Y:", (parseFloat(target.getAttribute('data-y'))))
-        console.log("X:", (parseFloat(target.getAttribute('data-x'))))
+        var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
+        var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
 
         // translate the element
         target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
