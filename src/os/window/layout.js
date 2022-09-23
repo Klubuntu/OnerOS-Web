@@ -78,19 +78,17 @@ export function draggable() {
         // keep the dragged position in the data-x/data-y attributes
         /*var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
         var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy*/
-        var x = (parseFloat(target.getAttribute('data-x')) || 2) + event.dx
-        var y = (parseFloat(target.getAttribute('data-y')) || 2) + event.dy
+        var x = (parseFloat(target.getAttribute('data-x'))) + event.dx
+        var y = (parseFloat(target.getAttribute('data-y'))) + event.dy
         console.log("Y:", (parseFloat(target.getAttribute('data-y'))))
         console.log("X:", (parseFloat(target.getAttribute('data-x'))))
 
         // translate the element
-        ty = (parseFloat(target.getAttribute('data-y'))) - 5;
-        tx = (parseFloat(target.getAttribute('data-y'))) - 5;
-        target.style.transform = 'translate(' + tx + 'px, ' + ty + 'px)'
+        target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
 
         // update the posiion attributes
-        target.setAttribute('data-x', tx)
-        target.setAttribute('data-y', ty)
+        target.setAttribute('data-x', x)
+        target.setAttribute('data-y', y)
     }
 
     // this function is used later in the resizing and gesture demos
