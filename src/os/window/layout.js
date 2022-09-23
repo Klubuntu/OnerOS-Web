@@ -51,31 +51,80 @@ export function draggable() {
 
     //const position = { x: 0, y: 0 };
 
-    interact(".window")
+    interact('.window')
         .draggable({
+            // enable inertial throwing
+            inertia: true,
+            // keep the element within the area of it's parent
             modifiers: [
-                /*interact.modifiers.snap({
-                    targets: [interact.snappers.grid({ x: 30, y: 30 })],
-                    range: Infinity,
-                    relativePoints: [{ x: 0, y: 0 }]
-                }),*/
-                interact.modifiers.restrict({
-                    restriction: ".box-zone".parentNode,
-                    elementRect: { top: 1, left: 1, bottom: 1, right: 1 },
+                interact.modifiers.restrictRect({
+                    restriction: 'parent',
                     endOnly: true
                 })
             ],
-            inertia: true
+            // enable autoScroll
+            autoScroll: true,
+
+            listeners: {
+                // call this function on every dragmove event
+                move: dragMoveListener,
+
+                // call this function on every dragend event
+                end(event) {
+                    var textEl = event.target.querySelector('p')
+
+                    /*textEl && (textEl.textContent =
+                    'moved a distance of ' +
+                    (Math.sqrt(Math.pow(event.pageX - event.x0, 2) +
+                                Math.pow(event.pageY - event.y0, 2) | 0))
+                        .toFixed(2) + 'px')*/
+                }
+            }
         })
-        .on("dragmove", function (event) {
-            /*console.log(event.target)*/
-            //$("#root").text(event.dx + " x " + event.dy)
-            x += event.dx;
-            y += event.dy;
 
-            event.target.style.transform = "translate(" + x + "px, " + y + "px)";
+    function dragMoveListener(event) {
+        var target = event.target
+        // keep the dragged position in the data-x/data-y attributes
+        var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
+        var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
 
-        });
+        // translate the element
+        target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
+
+        // update the posiion attributes
+        target.setAttribute('data-x', x)
+        target.setAttribute('data-y', y)
+    }
+
+    // this function is used later in the resizing and gesture demos
+    window.dragMoveListener = dragMoveListener
+
+
+    // interact(".window")
+    //     .draggable({
+    //         modifiers: [
+    //             /*interact.modifiers.snap({
+    //                 targets: [interact.snappers.grid({ x: 30, y: 30 })],
+    //                 range: Infinity,
+    //                 relativePoints: [{ x: 0, y: 0 }]
+    //             }),*/
+    //             interact.modifiers.restrict({
+    //                 restriction: ".box-zone".parentNode,
+    //                 elementRect: { top: 1, left: 1, bottom: 1, right: 1 },
+    //                 endOnly: true
+    //             })
+    //         ],
+    //         inertia: true
+    //     })
+    //     .on("dragmove", function (event) {
+    //         /*console.log(event.target)*/
+    //         //$("#root").text(event.dx + " x " + event.dy)
+    //         x += event.dx;
+    //         y += event.dy;
+
+    //         event.target.style.transform = "translate(" + x + "px, " + y + "px)";
+
+    //     });
 
     // interact(".box-zone")
     //     .dropzone({
