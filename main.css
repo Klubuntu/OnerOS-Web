@@ -197,6 +197,10 @@ a:hover {
     border-radius: 10px 10px 0px 0px;
 }
 
+.window-box .frame-window embed{
+    border-radius: 0 0 10px 10px;
+}
+
 .top-window {
     /*position: absolute;*/
     background-color: coral;
