@@ -47,9 +47,6 @@ export function resizable() {
         })
 }
 export function draggable() {
-    var x = 0; var y = 0;
-
-    //const position = { x: 0, y: 0 };
 
     interact('.window')
         .draggable({
@@ -72,12 +69,6 @@ export function draggable() {
                 // call this function on every dragend event
                 end(event) {
                     var textEl = event.target.querySelector('p')
-
-                    /*textEl && (textEl.textContent =
-                    'moved a distance of ' +
-                    (Math.sqrt(Math.pow(event.pageX - event.x0, 2) +
-                                Math.pow(event.pageY - event.y0, 2) | 0))
-                        .toFixed(2) + 'px')*/
                 }
             }
         })
@@ -85,8 +76,10 @@ export function draggable() {
     function dragMoveListener(event) {
         var target = event.target
         // keep the dragged position in the data-x/data-y attributes
-        var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
-        var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
+        /*var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
+        var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy*/
+        var x = 0;
+        var y = 0;
 
         // translate the element
         target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
@@ -98,33 +91,6 @@ export function draggable() {
 
     // this function is used later in the resizing and gesture demos
     window.dragMoveListener = dragMoveListener
-
-
-    // interact(".window")
-    //     .draggable({
-    //         modifiers: [
-    //             /*interact.modifiers.snap({
-    //                 targets: [interact.snappers.grid({ x: 30, y: 30 })],
-    //                 range: Infinity,
-    //                 relativePoints: [{ x: 0, y: 0 }]
-    //             }),*/
-    //             interact.modifiers.restrict({
-    //                 restriction: ".box-zone".parentNode,
-    //                 elementRect: { top: 1, left: 1, bottom: 1, right: 1 },
-    //                 endOnly: true
-    //             })
-    //         ],
-    //         inertia: true
-    //     })
-    //     .on("dragmove", function (event) {
-    //         /*console.log(event.target)*/
-    //         //$("#root").text(event.dx + " x " + event.dy)
-    //         x += event.dx;
-    //         y += event.dy;
-
-    //         event.target.style.transform = "translate(" + x + "px, " + y + "px)";
-
-    //     });
 
     // interact(".box-zone")
     //     .dropzone({
@@ -153,10 +119,6 @@ export function build_window() {
             minHeight: 200,
             minWidth: 200
         });
-    });*/
-    /*
-    $(function () {
-        $(".window").draggable();
     });*/
     $(".window").click(function (event) {
         $(".window").removeClass("active");
