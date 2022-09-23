@@ -54,11 +54,11 @@ export function draggable() {
     interact(".window")
         .draggable({
             modifiers: [
-                interact.modifiers.snap({
+                /*interact.modifiers.snap({
                     targets: [interact.snappers.grid({ x: 30, y: 30 })],
                     range: Infinity,
                     relativePoints: [{ x: 0, y: 0 }]
-                }),
+                }),*/
                 interact.modifiers.restrict({
                     restriction: ".box-zone".parentNode,
                     elementRect: { top: 1, left: 1, bottom: 1, right: 1 },
