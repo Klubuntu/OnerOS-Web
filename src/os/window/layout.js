@@ -77,42 +77,36 @@ export function draggable() {
 
         });
 
-    interact(".box-zone")
-        .dropzone({
-            ondrop: function (event) {
-                /* alert(event.relatedTarget.id + " was dropped into " + event.target.id); */
-                event.relatedTarget.classList.add("dropped");
-            }
-        })
+    // interact(".box-zone")
+    //     .dropzone({
+    //         ondrop: function (event) {
+    //             /* alert(event.relatedTarget.id + " was dropped into " + event.target.id); */
+    //             event.relatedTarget.classList.add("dropped");
+    //         }
+    //     })
 
-        .on("dropactivate", function (event) {
-            //event.target.classList.add("dropped");
-        });
+    //     .on("dropactivate", function (event) {
+    //         //event.target.classList.add("dropped");
+    //     });
 
 
 
-    interact("body").dropzone({
-        ondrop: function (event) {
-            /* alert(event.relatedTarget.id + " was dropped into " + event.target.id); */
-
-            event.relatedTarget.classList.remove("dropped");
-        }
-    });
 
 }
 
 export function build_window() {
-    $(function () {
+    /*$(function () {
         $(".window").resizable({
             maxHeight: "80%",
             maxWidth: "80%",
             minHeight: 200,
             minWidth: 200
         });
-    });
+    });*/
+    /*
     $(function () {
         $(".window").draggable();
-    });
+    });*/
     $(".window").click(function (event) {
         $(".window").removeClass("active");
         $(this).addClass("active");
