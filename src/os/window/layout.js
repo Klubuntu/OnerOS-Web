@@ -83,8 +83,9 @@ export function draggable() {
         console.log("Y:", (parseFloat(target.getAttribute('data-y'))))
         console.log("X:", (parseFloat(target.getAttribute('data-x'))))
 
-
         // translate the element
+        ty = (parseFloat(target.getAttribute('data-y'))) - 5;
+        tx = (parseFloat(target.getAttribute('data-y'))) - 5;
         target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
 
         // update the posiion attributes
